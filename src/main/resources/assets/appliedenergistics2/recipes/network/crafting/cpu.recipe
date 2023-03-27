@@ -97,3 +97,23 @@ shapeless=
     ae2:BlockCraftingUnit:0
     ae2:ItemMaterial.Cell16384kPart
     -> ae2:BlockAdvancedCraftingStorage:3
+
+shaped=
+    ae2:BlockCraftingUnit:0 ae2:ItemMaterial.Cell16384kPart,
+    ae2:ItemMaterial.Cell16384kPart ae2:ItemMaterial.Cell16384kPart
+    -> ae2:BlockUltimateCraftingStorage:0
+
+shaped=
+    ae2:BlockUltimateCraftingStorage:0 ae2:BlockUltimateCraftingStorage:0,
+    ae2:BlockUltimateCraftingStorage:0 ae2:BlockUltimateCraftingStorage:0
+    -> ae2:BlockUltimateCraftingStorage:1
+
+shaped=
+    ae2:BlockUltimateCraftingStorage:1 ae2:BlockUltimateCraftingStorage:1,
+    ae2:BlockUltimateCraftingStorage:1 ae2:BlockUltimateCraftingStorage:1
+    -> ae2:BlockUltimateCraftingStorage:2
+
+shaped=
+    ae2:BlockUltimateCraftingStorage:2 ae2:BlockUltimateCraftingStorage:2,
+    ae2:BlockUltimateCraftingStorage:2 ae2:BlockUltimateCraftingStorage:2
+    -> ae2:BlockUltimateCraftingStorage:3

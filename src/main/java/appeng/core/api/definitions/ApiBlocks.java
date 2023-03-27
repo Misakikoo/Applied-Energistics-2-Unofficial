@@ -102,6 +102,10 @@ public final class ApiBlocks implements IBlocks {
     private final ITileDefinition craftingStorage1024k;
     private final ITileDefinition craftingStorage4096k;
     private final ITileDefinition craftingStorage16384k;
+    private final ITileDefinition craftingStorage65536k;
+    private final ITileDefinition craftingStorage262144k;
+    private final ITileDefinition craftingStorage1048576k;
+    private final ITileDefinition craftingStorage4194304k;
     private final ITileDefinition craftingMonitor;
     private final ITileDefinition molecularAssembler;
     private final ITileDefinition lightDetector;
@@ -196,6 +200,10 @@ public final class ApiBlocks implements IBlocks {
         this.craftingStorage1024k = new WrappedDamageItemDefinition(this.craftingStorage256k, 1);
         this.craftingStorage4096k = new WrappedDamageItemDefinition(this.craftingStorage256k, 2);
         this.craftingStorage16384k = new WrappedDamageItemDefinition(this.craftingStorage256k, 3);
+        this.craftingStorage65536k = constructor.registerTileDefinition(new BlockUltimateCraftingStorage());
+        this.craftingStorage262144k = new WrappedDamageItemDefinition(this.craftingStorage65536k, 1);
+        this.craftingStorage1048576k = new WrappedDamageItemDefinition(this.craftingStorage65536k, 2);
+        this.craftingStorage4194304k = new WrappedDamageItemDefinition(this.craftingStorage65536k, 3);
         this.craftingMonitor = constructor.registerTileDefinition(new BlockCraftingMonitor());
         this.molecularAssembler = constructor.registerTileDefinition(new BlockMolecularAssembler());
         this.lightDetector = constructor.registerTileDefinition(lightDetector);
@@ -622,6 +630,26 @@ public final class ApiBlocks implements IBlocks {
     @Override
     public ITileDefinition craftingStorage16384k() {
         return this.craftingStorage16384k;
+    }
+
+    @Override
+    public ITileDefinition craftingStorage65536k() {
+        return this.craftingStorage65536k;
+    }
+
+    @Override
+    public ITileDefinition craftingStorage262144k() {
+        return this.craftingStorage262144k;
+    }
+
+    @Override
+    public ITileDefinition craftingStorage1048576k() {
+        return this.craftingStorage1048576k;
+    }
+
+    @Override
+    public ITileDefinition craftingStorage4194304k() {
+        return this.craftingStorage4194304k;
     }
 
     @Override
