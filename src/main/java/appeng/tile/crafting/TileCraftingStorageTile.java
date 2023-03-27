@@ -16,6 +16,7 @@ import net.minecraft.item.ItemStack;
 import appeng.api.AEApi;
 import appeng.api.definitions.IBlocks;
 import appeng.block.crafting.BlockAdvancedCraftingStorage;
+import appeng.block.crafting.BlockUltimateCraftingStorage;
 
 public class TileCraftingStorageTile extends TileCraftingTile {
 
@@ -24,7 +25,7 @@ public class TileCraftingStorageTile extends TileCraftingTile {
     @Override
     protected ItemStack getItemFromTile(final Object obj) {
         final IBlocks blocks = AEApi.instance().definitions().blocks();
-        final int storage = ((TileCraftingTile) obj).getStorageBytes() / KILO_SCALAR;
+        final int storage = ((TileCraftingTile) obj).getStorageBytes();
 
         switch (storage) {
             case 4:
@@ -62,6 +63,26 @@ public class TileCraftingStorageTile extends TileCraftingTile {
                     return stack;
                 }
                 break;
+            case 65536:
+                for (final ItemStack stack : blocks.craftingStorage16384k().maybeStack(1).asSet()) {
+                    return stack;
+                }
+                break;
+            case 262144:
+                for (final ItemStack stack : blocks.craftingStorage16384k().maybeStack(1).asSet()) {
+                    return stack;
+                }
+                break;
+            case 1048576:
+                for (final ItemStack stack : blocks.craftingStorage16384k().maybeStack(1).asSet()) {
+                    return stack;
+                }
+                break;
+            case 4194304:
+                for (final ItemStack stack : blocks.craftingStorage16384k().maybeStack(1).asSet()) {
+                    return stack;
+                }
+                break;
         }
 
         return super.getItemFromTile(obj);
@@ -83,18 +104,9 @@ public class TileCraftingStorageTile extends TileCraftingTile {
             return 0;
         }
         Block block = this.worldObj.getBlock(this.xCoord, this.yCoord, this.zCoord);
-        int blockMultiplier = block instanceof BlockAdvancedCraftingStorage ? 256 : 1;
+        int blockMultiplier = block instanceof BlockUltimateCraftingStorage ? 65536
+                : (block instanceof BlockAdvancedCraftingStorage ? 256 : 1);
 
-        switch (this.worldObj.getBlockMetadata(this.xCoord, this.yCoord, this.zCoord) & 3) {
-            default:
-            case 0:
-                return KILO_SCALAR * blockMultiplier;
-            case 1:
-                return 4 * KILO_SCALAR * blockMultiplier;
-            case 2:
-                return 16 * KILO_SCALAR * blockMultiplier;
-            case 3:
-                return 64 * KILO_SCALAR * blockMultiplier;
-        }
+        return blockMultiplier << (2 * (this.worldObj.getBlockMetadata(this.xCoord, this.yCoord, this.zCoord) & 3));
     }
 }

@@ -114,10 +114,16 @@ public enum ExtraBlockTextures {
     BlockCraftingStorage4k("BlockCraftingStorage4k"),
     BlockCraftingStorage16k("BlockCraftingStorage16k"),
     BlockCraftingStorage64k("BlockCraftingStorage64k"),
+
     BlockCraftingStorage256k("BlockCraftingStorage256k"),
     BlockCraftingStorage1024k("BlockCraftingStorage1024k"),
     BlockCraftingStorage4096k("BlockCraftingStorage4096k"),
     BlockCraftingStorage16384k("BlockCraftingStorage16384k"),
+
+    BlockCraftingStorage65536k("BlockCraftingStorage65536k"),
+    BlockCraftingStorage262144k("BlockCraftingStorage262144k"),
+    BlockCraftingStorage1048576k("BlockCraftingStorage1048576k"),
+    BlockCraftingStorage4194304k("BlockCraftingStorage4194304k"),
 
     BlockCraftingAcceleratorFit("BlockCraftingAcceleratorFit"),
     BlockCraftingAccelerator4xFit("BlockCraftingAccelerator4xFit"),
@@ -136,10 +142,16 @@ public enum ExtraBlockTextures {
     BlockCraftingStorage4kFit("BlockCraftingStorage4kFit"),
     BlockCraftingStorage16kFit("BlockCraftingStorage16kFit"),
     BlockCraftingStorage64kFit("BlockCraftingStorage64kFit"),
+
     BlockCraftingStorage256kFit("BlockCraftingStorage256kFit"),
     BlockCraftingStorage1024kFit("BlockCraftingStorage1024kFit"),
     BlockCraftingStorage4096kFit("BlockCraftingStorage4096kFit"),
     BlockCraftingStorage16384kFit("BlockCraftingStorage16384kFit"),
+
+    BlockCraftingStorage65536kFit("BlockCraftingStorage65536kFit"),
+    BlockCraftingStorage262144kFit("BlockCraftingStorage262144kFit"),
+    BlockCraftingStorage1048576kFit("BlockCraftingStorage1048576kFit"),
+    BlockCraftingStorage4194304kFit("BlockCraftingStorage4194304kFit"),
 
     BlockCraftingUnitRing("BlockCraftingUnitRing"),
     BlockCraftingUnitRingLongRotated("BlockCraftingUnitRingLongRotated"),
